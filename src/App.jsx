@@ -1,22 +1,34 @@
-import { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 import AdminDashboard from "./pages/Admin/AdminDashboard";
 import DaftarUser from "./pages/Admin/DaftarUser";
+import Layout from "./components/Layout";
+import Require from "./components/Require";
+import Home from "./pages/Users/Home";
+import UserProfile from "./pages/Users/UserProfile";
 
 function App() {
   return (
-    <>
-      <Router>
-        <Routes>
-          <Route path='/' Component={LoginPage} />
-          <Route path='/register' Component={RegisterPage} />
-          <Route path='/admin-dashboard' Component={AdminDashboard} />
-          <Route path='/admin-dashboard/daftar-user' Component={DaftarUser} />
-        </Routes>
-      </Router>
-    </>
+    <Routes>
+      <Route path='/' element={<Layout />}>
+        {/* Public Routes */}
+        <Route path='/' element={<LoginPage />} />
+        <Route path='/register' element={<RegisterPage />} />
+
+        {/* Restricted Admin */}
+        <Route element={<Require allowedID={[1]} />}>
+          <Route path='/dashboard' element={<AdminDashboard />} />
+          <Route path='/dashboard/daftar-user' element={<DaftarUser />} />
+        </Route>
+        <Route element={<Require />}>
+          <Route path='/home' element={<Home />} />
+          <Route path='/user-profile' element={<UserProfile />} />
+        </Route>
+
+        {/* Restricted Admin / User */}
+      </Route>
+    </Routes>
   );
 }
 

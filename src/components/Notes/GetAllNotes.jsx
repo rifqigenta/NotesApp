@@ -8,35 +8,24 @@ const GetAllNotes = () => {
         <div className='collapse-content'>
           <div className='overflow-x-auto'>
             <table className='table'>
-              {/* head */}
               <thead>
                 <tr>
-                  <th>No</th>
+                  <th>Note ID</th>
+                  <th>User ID</th>
+                  <th>User Name</th>
                   <th>Title</th>
-                  <th>Notes</th>
+                  <th>Note</th>
                   <th>Action</th>
                 </tr>
               </thead>
               <tbody>
                 <tr className='hover:bg-neutral'>
-                  <th>1</th>
-                  <td>Hart Hagerty</td>
-                  <td className='max-w-[8em]'>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur obcaecati deleniti id nesciunt odio repudiandae, voluptates blanditiis quibusdam nihil quia?
-                  </td>
-                  <td>Purple</td>
-                </tr>
-                <tr className='hover:bg-neutral'>
-                  <th>2</th>
-                  <td>Hart Hagerty</td>
-                  <td>Desktop Support Technician</td>
-                  <td>Purple</td>
-                </tr>
-                <tr className='hover:bg-neutral'>
-                  <th>3</th>
-                  <td>Hart Hagerty</td>
-                  <td>Desktop Support Technician</td>
-                  <td>Purple</td>
+                  <th>Note ID</th>
+                  <td>User ID</td>
+                  <td>User Name</td>
+                  <td>Title</td>
+                  <td className='max-w-[8em]'>Note</td>
+                  <td>Action</td>
                 </tr>
               </tbody>
             </table>

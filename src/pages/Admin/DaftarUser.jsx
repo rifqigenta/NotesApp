@@ -8,7 +8,7 @@ const DaftarUser = () => {
         <Header />
       </nav>
       <section>
-        <div className='flex flex-col gap-8 mt-16 mx-36'>
+        <div className='card flex flex-col gap-8 mt-16 mx-28 shadow-xl border-t-2 border-neutral px-8 pt-8 min-h-[75vh] max-h-min'>
           <p className='text-[34px] text-center'>Daftar User</p>
           <GetAllUsersComponent />
         </div>
