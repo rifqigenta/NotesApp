@@ -1,5 +1,4 @@
 import React from "react";
-import useAuth from "../../hooks/useAuth";
 import ModalPostNotes from "../../layouts/Users/ModalPostNotes";
 
 const PostNotesComponent = () => {

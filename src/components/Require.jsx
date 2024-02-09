@@ -6,10 +6,8 @@ const Require = ({ allowedID }) => {
   const location = useLocation();
 
   const isAdmin = Array.isArray(auth?.id) && auth?.id.includes(allowedID);
-  //   const isAdmin = auth?.id?.find((i) => allowedID?.includes(i));
 
   return auth?.user ? <Outlet /> : <Navigate to='/' state={{ from: location }} replace />;
-  // auth?.user ? <Outlet /> : <Navigate to='/' state={{ from: location }} replace />
 };
 
 export default Require;

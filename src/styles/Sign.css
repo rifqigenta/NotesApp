@@ -5,3 +5,47 @@
   align-items: center;
   min-height: 100vh;
 }
+
+@media only screen and (max-width: 425px) {
+  #login_card {
+    width: 320px;
+  }
+  #register_card {
+    width: 350px;
+  }
+  #register_card form {
+    gap: 0.5em;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  #login_card {
+    width: 250px;
+    padding: 8px 10px;
+  }
+  #login_card form {
+    gap: 1em;
+  }
+  #register_card {
+    width: 270px;
+    padding: 8px 18px;
+  }
+  #register_card form {
+    gap: 0.5em;
+  }
+  #register_card h1 {
+    font-size: 24px;
+  }
+  #register_card p {
+    font-size: 12px;
+  }
+  #register_card input {
+    height: 5vh;
+    font-size: 12px;
+  }
+  #register_card button {
+    /* width: 50%; */
+    max-height: 0px;
+    font-size: 12px;
+  }
+}

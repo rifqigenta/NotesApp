@@ -1,0 +1,19 @@
+@media only screen and (max-width: 425px) {
+  #user_home_card {
+    width: 250px;
+    margin-inline: auto;
+    padding: 4px 18px;
+  }
+  #user_home_card h1 {
+    font-size: 18px;
+  }
+  #list_user_notes {
+    margin-inline: auto;
+  }
+  #list_user_notes summary {
+    font-size: small;
+  }
+  #list_user_notes .collapse-content {
+    width: 45%;
+  }
+}

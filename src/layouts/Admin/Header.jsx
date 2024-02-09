@@ -1,6 +1,7 @@
 import React from "react";
 import "../../styles/Layout.css";
 import { NavLink } from "react-router-dom";
+import LogoutComponent from "../../components/Auth/LogoutComponent";
 
 const Header = () => {
   return (
@@ -15,10 +16,10 @@ const Header = () => {
             </div>
             <ul tabIndex={0} className='menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52'>
               <li>
-                <NavLink to='/'>Daftar Notes</NavLink>
+                <NavLink to='/dashboard'>Daftar Notes</NavLink>
               </li>
               <li>
-                <NavLink to='/admin-dashboard/daftar-user'>Daftar User</NavLink>
+                <NavLink to='/dashboard/daftar-user'>Daftar User</NavLink>
               </li>
             </ul>
           </div>
@@ -27,15 +28,15 @@ const Header = () => {
         <div className='navbar-center hidden lg:flex'>
           <ul className='menu menu-horizontal px-1'>
             <li>
-              <NavLink to='/admin-dashboard'>Daftar Notes</NavLink>
+              <NavLink to='/dashboard'>Daftar Notes</NavLink>
             </li>
             <li>
-              <NavLink to='/admin-dashboard/daftar-user'>Daftar User</NavLink>
+              <NavLink to='/dashboard/daftar-user'>Daftar User</NavLink>
             </li>
           </ul>
         </div>
         <div className='navbar-end'>
-          <a className='btn'>Logout</a>
+          <LogoutComponent />
         </div>
       </div>
     </>

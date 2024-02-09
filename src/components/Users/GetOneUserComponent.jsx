@@ -16,7 +16,6 @@ const GetOneUserComponent = () => {
           Authorization: `Bearer ${access_token}`,
         },
       });
-      console.log(response.data);
     } catch (err) {
       console.error(err);
     }

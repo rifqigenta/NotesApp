@@ -10,7 +10,6 @@ const ModalPostNotes = ({ getAllNotes }) => {
   const [newTitle, setNewTitle] = useState("");
   const [newNote, setNewNote] = useState("");
 
-  //   const access_token = auth.auth.access_token;
   const { access_token } = auth;
 
   const closeModal = () => {

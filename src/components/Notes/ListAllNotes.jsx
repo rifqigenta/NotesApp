@@ -64,12 +64,19 @@ const ListAllNotes = () => {
         <ModalPostNotes getAllNotes={getAllNotes} />
       </div>
       <div className='max-h-[50vh] overflow-y-scroll'>
-        {notes.map((note) => (
-          <details className='collapse collapse-arrow mb-8 bg-base-200 border border-accent'>
-            <summary className='collapse-title text-xl font-medium'>{note.title}</summary>
-            <TableNotes data={[note]} header={header} />
-          </details>
-        ))}
+        {notes.length === 0 ? (
+          <div className='mt-12'>
+            <p className='text-center text-neutral-content'>Notes Empty</p>
+            <p className='text-center text-[24px]'>There are no notes yet.</p>
+          </div>
+        ) : (
+          notes.map((note) => (
+            <details className='collapse collapse-arrow mb-8 bg-base-200 border border-accent'>
+              <summary className='collapse-title text-xl font-medium'>{note.title}</summary>
+              <TableNotes data={[note]} header={header} />
+            </details>
+          ))
+        )}
       </div>
     </>
   );

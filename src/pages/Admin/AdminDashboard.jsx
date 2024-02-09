@@ -9,9 +9,11 @@ const AdminDashboard = () => {
         <Header />
       </nav>
       <section>
-        <div className='flex flex-col gap-8 mt-16 mx-36'>
-          <p className='text-center text-[34px]'>Daftar Notes User</p>
-          <GetAllNotes />
+        <div className='card flex flex-col gap-8 mt-8 mx-28 shadow-xl border-t-2 border-neutral px-8 pb-8 min-h-[55vh] max-h-min'>
+          <p className='text-center text-[34px] mt-6'>Daftar Notes User</p>
+          <div className='flex flex-col gap-8 mt-0 mx-36'>
+            <GetAllNotes />
+          </div>
         </div>
       </section>
     </>

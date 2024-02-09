@@ -37,7 +37,6 @@ const TableNotes = (val) => {
       <div className='collapse-content'>
         <div className='overflow-x-auto'>
           <table className='table'>
-            {/* head */}
             <thead>
               {header?.map((rowHeaders) => (
                 <RowHeaders note_id={rowHeaders.note_id} user_name={rowHeaders.user_name} title={rowHeaders.title} note={rowHeaders.note} action={rowHeaders.action} />

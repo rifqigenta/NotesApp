@@ -1,6 +1,7 @@
 import React from "react";
 import "../../styles/Layout.css";
 import { NavLink } from "react-router-dom";
+import LogoutComponent from "../../components/Auth/LogoutComponent";
 
 const Header = () => {
   return (
@@ -35,7 +36,7 @@ const Header = () => {
           </ul>
         </div>
         <div className='navbar-end'>
-          <a className='btn'>Logout</a>
+          <LogoutComponent />
         </div>
       </div>
     </>

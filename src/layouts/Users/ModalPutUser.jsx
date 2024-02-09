@@ -3,14 +3,14 @@ import useAuth from "../../hooks/useAuth";
 import axios from "../../services/axios";
 import toast from "react-hot-toast";
 
-const ModalPutUser = ({ getAllUser }) => {
+const ModalPutUser = ({ getAllUser, name, user, id }) => {
   const { auth } = useAuth();
 
   const [updateName, setUpdateName] = useState("");
   const [updateUser, setUpdateUser] = useState("");
   const [updatePass, setUpdatePass] = useState("");
 
-  const { access_token, name, user, id } = auth;
+  const { access_token } = auth;
 
   const closeModal = () => document.getElementById(`my_modal_put_user${id}`).close();
 
@@ -60,7 +60,6 @@ const ModalPutUser = ({ getAllUser }) => {
             <div className='modal-action flex justify-end mt-8'>
               <form method='dialog'>
                 <button className='btn'>Close</button>
-                {/* <Toaster /> */}
               </form>
               <button className='btn' type='submit'>
                 Submit

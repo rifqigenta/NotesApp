@@ -7,6 +7,7 @@ import Layout from "./components/Layout";
 import Require from "./components/Require";
 import Home from "./pages/Users/Home";
 import UserProfile from "./pages/Users/UserProfile";
+import { Error404 } from "./pages/Error404";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         {/* Public Routes */}
         <Route path='/' element={<LoginPage />} />
         <Route path='/register' element={<RegisterPage />} />
+        <Route path='*' element={<Error404 />} />
 
         {/* Restricted Admin */}
         <Route element={<Require allowedID={[1]} />}>

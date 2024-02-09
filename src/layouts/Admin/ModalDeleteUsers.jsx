@@ -4,19 +4,20 @@ import useAuth from "../../hooks/useAuth";
 import axios from "../../services/axios";
 import toast from "react-hot-toast";
 
-const ModalDeleteUser = () => {
+const ModalDeleteUsers = ({ getAllUser, name, id }) => {
   const { auth } = useAuth();
 
-  const { access_token, id } = auth;
+  const { access_token } = auth;
 
   const [swalProps, setSwalProps] = useState({});
 
   const handleOpen = (e) => {
     e.preventDefault();
+    getAllUser();
     setSwalProps({
       show: true,
       icon: "warning",
-      title: "Are you sure to delete this account ?",
+      title: `Are you sure to delete this ${name} account ?`,
       text: "This action may affect this account to be permanently deleted",
       confirmButtonText: "Delete",
       confirmButtonColor: "#DD6B55",
@@ -33,7 +34,7 @@ const ModalDeleteUser = () => {
         },
       });
       toast.success("Successfully delete user!");
-      window.location.reload();
+      getAllUser();
     } catch (err) {
       console.error(err);
       toast.error("Failed deleting user");
@@ -50,4 +51,4 @@ const ModalDeleteUser = () => {
   );
 };
 
-export default ModalDeleteUser;
+export default ModalDeleteUsers;

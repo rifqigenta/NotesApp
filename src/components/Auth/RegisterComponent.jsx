@@ -51,9 +51,6 @@ const RegisterComponent = () => {
         },
       });
       setSuccess(true);
-      console.log(response.data);
-      console.log(response.access_token);
-      console.log(JSON.stringify(response));
       toast.success("Account Created, redirect to Login ...");
       setTimeout(() => {
         navigate("/");
@@ -102,8 +99,8 @@ const RegisterComponent = () => {
   return (
     <>
       <section className='gate'>
-        <div className='card border-t-2 border-neutral-content w-[420px] bg-base-100 shadow-xl p-8'>
-          <p className='text-[30px] text-center mb-8'>Sign Up</p>
+        <div id='register_card' className='card border-t-2 border-neutral-content w-[420px] bg-base-100 shadow-xl p-8'>
+          <h1 className='text-[30px] text-center mb-8'>Sign Up</h1>
           <p ref={errRef} className={err ? "errmsg" : "offscreen"} aria-live='assertive'>
             {err}
           </p>

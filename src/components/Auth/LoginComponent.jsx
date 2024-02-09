@@ -23,7 +23,6 @@ const LoginComponent = () => {
       const response = await axios.post(LOG_URL, JSON.stringify({ user, pass }), {
         headers: { "Content-Type": "application/json" },
       });
-      console.log(response.data.user.id);
       const access_token = response?.data?.access_token;
       const id = response?.data?.user?.id;
       const name = response?.data?.user?.name;
@@ -65,7 +64,7 @@ const LoginComponent = () => {
   return (
     <>
       <section className='gate'>
-        <div className='card border-t-2 border-neutral-content  w-[420px] bg-base-100 shadow-xl p-8'>
+        <div id='login_card' className='card border-t-2 border-neutral-content  w-[420px] bg-base-100 shadow-xl p-8'>
           <p className='text-[30px] text-center mb-8'>Login</p>
           <form onSubmit={handleSubmit} className='flex flex-col mx-0 justify-center gap-8'>
             <input
