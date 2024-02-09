@@ -41,7 +41,7 @@ const GetOneUserComponent = () => {
           <p>********</p>
         </div>
         <div className='flex justify-center gap-4'>
-          <ModalPutUser getAllUser={getAllUser} />
+          <ModalPutUser getAllUser={getAllUser} name={name} user={user} />
           <ModalDeleteUser />
         </div>
       </div>
