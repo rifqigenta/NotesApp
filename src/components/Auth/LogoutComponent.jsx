@@ -28,7 +28,7 @@ const LogoutComponent = () => {
         "Content-Type": "application/json",
       },
     });
-    window.location.reload();
+    window.location.replace("/");
   };
   return (
     <div onClick={handleOpen} className='btn border-none bg-transparent hover:border-none hover:bg-transparent hover:text-error w-28 shadow-none'>
